@@ -1,0 +1,31 @@
+# Pastas de histórico e recuperação do Delphi
+__history/
+__recovery/
+
+# Arquivos compilados e binários
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.so
+*.apk
+*.aab
+*.ipa
+
+# Pastas de saída (Onde ficam os executáveis)
+Win32/
+Win64/
+Android/
+Android64/
+iOSDevice32/
+iOSDevice64/
+iOSSimulator/
+OSX32/
+OSX64/
+
+# Arquivos de configuração de usuário local (Não devem ser compartilhados)
+*.dproj.local
+*.identcache
+*.stat
+*.tvsconfig
