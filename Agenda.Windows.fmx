@@ -1,0 +1,33 @@
+inherited Form1_Windows: TForm1_Windows
+  DesignerMasterStyle = 0
+  inherited Z: TRectangle
+    inherited Nome: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      inherited Label3: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+  inherited edtTel: TEdit
+    Text = '1234567890()-+ '
+  end
+  inherited ListViewContatos: TListView
+    ItemIndex = 0
+    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited edtNome: TEdit
+    Text = 'Vinicius'
+    inherited Telefone: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited connAgenda: TMyConnection
+    Connected = True
+    EncryptedPassword = 'B8FF8AFF96FFB2FF86FF8CFF8EFF93FF'
+  end
+  inherited qryContatos: TMyQuery
+    SQL.Strings = (
+      'SELECT id_contato, nome, telefone FROM contatos')
+    Active = True
+  end
+end

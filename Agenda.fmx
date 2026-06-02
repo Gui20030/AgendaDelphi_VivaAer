@@ -8,6 +8,7 @@ object Form1: TForm1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 0
   object Z: TRectangle
     Align = Client
@@ -56,7 +57,6 @@ object Form1: TForm1
     TabOrder = 0
     KeyboardType = NumberPad
     FilterChar = '1234567890+-() '
-    Text = '1234567890'
     Position.X = 8.000000000000000000
     Position.Y = 169.000000000000000000
     Size.Width = 196.000000000000000000
@@ -76,7 +76,6 @@ object Form1: TForm1
     ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
-    ItemIndex = 0
     Position.X = 248.000000000000000000
     Position.Y = 64.000000000000000000
     Size.Width = 379.000000000000000000
@@ -106,7 +105,6 @@ object Form1: TForm1
   object edtNome: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 10
-    Text = 'Vinicius'
     Position.X = 8.000000000000000000
     Position.Y = 96.000000000000000000
     Size.Width = 196.000000000000000000
@@ -122,64 +120,6 @@ object Form1: TForm1
       TextSettings.FontColor = claWhite
       Text = 'Telefone'
       TabOrder = 0
-    end
-  end
-  object connAgenda: TMyConnection
-    Database = 'agendadb_vivaaer'
-    Username = 'root'
-    Server = 'localhost'
-    Connected = True
-    LoginPrompt = False
-    Left = 24
-    Top = 280
-    EncryptedPassword = 'B8FF8AFF96FFB2FF86FF8CFF8EFF93FF'
-  end
-  object qryContatos: TMyQuery
-    Connection = connAgenda
-    SQL.Strings = (
-      'SELECT * FROM Contatos')
-    BeforePost = qryContatosBeforePost
-    Active = True
-    Left = 24
-    Top = 336
-  end
-  object BindSourceDB1: TBindSourceDB
-    DataSet = qryContatos
-    ScopeMappings = <>
-    Left = 104
-    Top = 280
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 108
-    Top = 341
-    object LinkControlToField2: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'telefone'
-      Control = edtTel
-      Track = False
-    end
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'nome'
-      Control = ListViewContatos
-      FillExpressions = <
-        item
-          SourceMemberName = 'telefone'
-          ControlMemberName = 'Detail'
-        end>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkControlToField3: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'nome'
-      Control = edtNome
-      Track = False
     end
   end
   object StyleBook1: TStyleBook
@@ -557,5 +497,67 @@ object Form1: TForm1
       end>
     Left = 192
     Top = 344
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 184
+    Top = 280
+  end
+  object connAgenda: TMyConnection
+    Database = 'agendadb_vivaaer'
+    Username = 'root'
+    Server = 'localhost'
+    LoginPrompt = False
+    Left = 24
+    Top = 280
+    EncryptedPassword = 'B8FF8AFF96FFB2FF86FF8CFF8EFF93FF'
+  end
+  object qryContatos: TMyQuery
+    Connection = connAgenda
+    SQL.Strings = (
+      'SELECT * FROM Contatos')
+    BeforePost = qryContatosBeforePost
+    Left = 24
+    Top = 336
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = qryContatos
+    ScopeMappings = <>
+    Left = 104
+    Top = 280
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 108
+    Top = 341
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'telefone'
+      Control = edtTel
+      Track = False
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'nome'
+      Control = ListViewContatos
+      FillExpressions = <
+        item
+          SourceMemberName = 'telefone'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'nome'
+      Control = edtNome
+      Track = False
+    end
   end
 end

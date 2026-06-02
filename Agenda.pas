@@ -31,11 +31,14 @@ type
     Telefone: TLabel;
     Cancelar: TButton;
     Label3: TLabel;
+    Timer1: TTimer;
     procedure NovoClick(Sender: TObject);
     procedure ExcluirClick(Sender: TObject);
     procedure SalvarClick(Sender: TObject);
     procedure qryContatosBeforePost(DataSet: TDataSet);
     procedure CancelarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +51,9 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.Windows.fmx MSWINDOWS}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TForm1.NovoClick(Sender: TObject);
 begin
@@ -90,6 +96,13 @@ begin
     qryContatos.Delete; // Deleta a linha selecionada no momento
 end;
 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  // Timer liga para TODOS (Windows e Android)
+  // Como as propriedades visuais estão False, o app abre instantaneamente
+  Timer1.Enabled := True;
+end;
+
 procedure TForm1.SalvarClick(Sender: TObject);
 begin
   // 1. Validação: Verifica se o campo Nome está vazio
@@ -108,6 +121,35 @@ begin
   // 2. Salvamento: Se o código chegou até aqui, é porque o nome está preenchido!
   if qryContatos.State in [dsInsert, dsEdit] then
     qryContatos.Post;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  // Desliga a si mesmo
+  Timer1.Enabled := False;
+
+  try
+    // Se estiver no Android, ajusta o IP e força o modo Direct
+    {$IFDEF ANDROID}
+    connAgenda.Server := '192.168.15.26';
+
+    connAgenda.Username := 'app';
+    connAgenda.Password := '1234';
+
+    connAgenda.Options.Direct := True;
+    {$ENDIF}
+
+    // Se estiver no Windows, ele vai ignorar o bloco acima e usar o "localhost"
+    // que já está configurado no seu componente.
+
+    // Agora sim, com a tela já aberta, ele conecta!
+    connAgenda.Connected := True;
+    qryContatos.Open;
+
+  except
+    on E: Exception do
+      ShowMessage('Erro ao conectar: ' + E.Message);
+  end;
 end;
 
 end.

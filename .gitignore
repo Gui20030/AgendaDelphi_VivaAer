@@ -15,9 +15,7 @@ __recovery/
 
 # Pastas de saída (Onde ficam os executáveis)
 Win32/
-Win64/
 Android/
-Android64/
 iOSDevice32/
 iOSDevice64/
 iOSSimulator/

@@ -1,0 +1,26 @@
+inherited Form1_NmXhdpiPh: TForm1_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited Z: TRectangle
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited Nome: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      inherited Label3: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+  inherited ListViewContatos: TListView
+    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited edtNome: TEdit
+    inherited Telefone: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited connAgenda: TMyConnection
+    EncryptedPassword = 'B8FF8AFF96FFB2FF86FF8CFF8EFF93FF'
+  end
+end

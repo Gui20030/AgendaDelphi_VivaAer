@@ -1,0 +1,94 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Z: TRectangle
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited Nome: TLabel
+      Position.Y = 103.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      inherited Label3: TLabel
+        Position.X = -8.000000000000000000
+        Position.Y = -88.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 65.000000000000000000
+        TextSettings.Font.Size = 30.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Cancelar: TButton
+      Position.X = 223.000000000000000000
+      Position.Y = 245.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  inherited edtTel: TEdit
+    TextSettings.FontColor = claAliceblue
+    Position.X = 223.000000000000000000
+    Position.Y = 128.000000000000000000
+    StyledSettings = [Family, Size, Style]
+  end
+  inherited Salvar: TButton
+    Position.X = 223.000000000000000000
+    Position.Y = 193.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited ListViewContatos: TListView
+    Position.Y = 312.000000000000000000
+    Size.Width = 450.000000000000000000
+    Size.Height = 383.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Font.Size = 17.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+    ItemAppearanceObjects.ItemObjects.Detail.Font.Size = 14.000000000000000000
+  end
+  inherited Novo: TButton
+    Position.Y = 193.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited Excluir: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 245.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited edtNome: TEdit
+    TextSettings.FontColor = claAliceblue
+    Position.Y = 128.000000000000000000
+    StyledSettings = [Family, Size, Style]
+    inherited Telefone: TLabel
+      Position.X = 215.000000000000000000
+      Position.Y = -25.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited StyleBook1: TStyleBook
+    Top = 624
+  end
+  inherited Timer1: TTimer
+    Left = 192
+    Top = 560
+  end
+  inherited connAgenda: TMyConnection
+    Top = 560
+    EncryptedPassword = 'B8FF8AFF96FFB2FF86FF8CFF8EFF93FF'
+  end
+  inherited qryContatos: TMyQuery
+    SQL.Strings = (
+      'SELECT id_contato, nome, telefone FROM contatos')
+    Top = 616
+  end
+  inherited BindSourceDB1: TBindSourceDB
+    Top = 560
+  end
+  inherited BindingsList1: TBindingsList
+    Top = 621
+  end
+end
