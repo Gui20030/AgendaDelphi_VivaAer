@@ -1,24 +1,21 @@
 inherited Form1_Windows: TForm1_Windows
   DesignerMasterStyle = 0
   inherited Z: TRectangle
-    inherited Nome: TLabel
+    inherited Label1: TLabel
       TextSettings.Font.StyleExt = {00070000000000000004000000}
-      inherited Label3: TLabel
+    end
+    inherited edtNome: TEdit
+      inherited Nome: TLabel
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
-  end
-  inherited edtTel: TEdit
-    Text = '1234567890()-+ '
-  end
-  inherited ListViewContatos: TListView
-    ItemIndex = 0
-    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
-  end
-  inherited edtNome: TEdit
-    Text = 'Vinicius'
-    inherited Telefone: TLabel
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    inherited edtTel: TEdit
+      inherited Telefone: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited ListViewContatos: TListView
+      ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
     end
   end
   inherited connAgenda: TMyConnection

@@ -1,34 +1,55 @@
 ﻿[edtTel]
-Coordinates=560,80,44,51
+Coordinates=560,80,50,58
 
 [ListViewContatos]
-Coordinates=-10,-10,100,195
+Coordinates=-10,-10,114,234
 
 [connAgenda]
-Coordinates=107,207,76,33
+Coordinates=107,207,86,36
 
 [qryContatos]
-Coordinates=110,0,74,33
+Coordinates=110,0,84,36
 Visible=False
 
 []
 Coordinates=109,1,53,51
 
 [BindSourceDB1]
-Coordinates=310,-10,92,159
+Coordinates=310,-10,106,152
 
 [BindingsList1]
-Coordinates=59,150,82,33
+Coordinates=59,150,91,36
 
 [Novo]
-Coordinates=160,170,40,51
+Coordinates=160,170,44,58
 
 [Salvar]
-Coordinates=270,170,45,51
+Coordinates=270,170,51,58
 
 [Excluir]
-Coordinates=380,170,48,51
+Coordinates=380,170,53,58
 
 [edtNome]
-Coordinates=550,-10,58,51
+Coordinates=550,-10,66,58
+
+[Telefone]
+Coordinates=242,78,65,58
+
+[StyleBook1]
+Coordinates=242,247,80,36
+
+[Cancelar]
+Coordinates=123,55,66,58
+
+[Nome]
+Coordinates=242,1,48,58
+
+[Timer1]
+Coordinates=242,302,55,36
+
+[Label1]
+Coordinates=40,243,53,58
+
+[Z]
+Coordinates=223,339,40,36
 

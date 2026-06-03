@@ -5,68 +5,141 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
   inherited Z: TRectangle
     Size.Width = 450.000000000000000000
     Size.Height = 695.000000000000000000
-    inherited Nome: TLabel
-      Position.Y = 103.000000000000000000
+    inherited Label1: TLabel
+      Align = Top
+      StyledSettings = []
+      Margins.Bottom = 30.000000000000000000
+      Size.Width = 450.000000000000000000
+      Size.Height = 49.000000000000000000
+      TextSettings.Font.Family = 'MS Reference Sans Serif'
       TextSettings.Font.StyleExt = {00070000000000000004000000}
-      inherited Label3: TLabel
-        Position.X = -8.000000000000000000
-        Position.Y = -88.000000000000000000
-        Size.Width = 450.000000000000000000
-        Size.Height = 65.000000000000000000
-        TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.VertAlign = Trailing
+    end
+    inherited GridPanelLayout1: TGridPanelLayout
+      Align = Bottom
+      Margins.Top = 5.000000000000000000
+      Margins.Bottom = 13.000000000000000000
+      Position.Y = 126.000000000000000000
+      Size.Width = 450.000000000000000000
+      Size.Height = 101.000000000000000000
+      ControlCollection = <
+        item
+          Column = 0
+          Control = Novo
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = Salvar
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = Excluir
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = Cancelar
+          Row = 1
+        end>
+      inherited Cancelar: TButton
+        Align = Client
+        StyledSettings = [Size, Style]
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 13.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 202.000000000000000000
+        Size.Height = 42.500000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
+        TextSettings.FontColor = claAliceblue
+      end
+      inherited Excluir: TButton
+        Align = Client
+        StyledSettings = [Size, Style]
+        Margins.Left = 13.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 202.000000000000000000
+        Size.Height = 42.500000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
+        TextSettings.FontColor = claAliceblue
+      end
+      inherited Novo: TButton
+        Align = Client
+        StyledSettings = [Size, Style]
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 13.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 202.000000000000000000
+        Size.Height = 42.500000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
+        TextSettings.FontColor = claAliceblue
+      end
+      inherited Salvar: TButton
+        Align = Client
+        StyledSettings = [Size, Style]
+        Margins.Left = 13.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 202.000000000000000000
+        Size.Height = 42.500000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
+        TextSettings.FontColor = claAliceblue
+      end
+    end
+    inherited edtNome: TEdit
+      Align = Left
+      ControlType = Platform
+      TextSettings.FontColor = claAliceblue
+      TextSettings.VertAlign = Trailing
+      Position.X = 10.000000000000000000
+      Position.Y = 79.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 160.000000000000000000
+      StyledSettings = [Family, Size, Style]
+      inherited Nome: TLabel
+        Align = Bottom
+        StyledSettings = [Size]
+        Margins.Bottom = 40.000000000000000000
+        Position.Y = -25.000000000000000000
+        Size.Width = 160.000000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
-    inherited Cancelar: TButton
-      Position.X = 223.000000000000000000
-      Position.Y = 245.000000000000000000
-      Size.Width = 196.000000000000000000
-      Size.Height = 44.000000000000000000
-      Size.PlatformDefault = False
+    inherited edtTel: TEdit
+      Align = Right
+      ControlType = Platform
+      TextSettings.FontColor = claAliceblue
+      TextSettings.VertAlign = Trailing
+      Position.X = 280.000000000000000000
+      Position.Y = 79.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 160.000000000000000000
+      StyledSettings = [Family, Size, Style]
+      inherited Telefone: TLabel
+        Align = Bottom
+        StyledSettings = [Size]
+        Margins.Bottom = 40.000000000000000000
+        Position.Y = -25.000000000000000000
+        Size.Width = 160.000000000000000000
+        TextSettings.Font.Family = 'MS Reference Sans Serif'
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
     end
-  end
-  inherited edtTel: TEdit
-    TextSettings.FontColor = claAliceblue
-    Position.X = 223.000000000000000000
-    Position.Y = 128.000000000000000000
-    StyledSettings = [Family, Size, Style]
-  end
-  inherited Salvar: TButton
-    Position.X = 223.000000000000000000
-    Position.Y = 193.000000000000000000
-    Size.Width = 196.000000000000000000
-    Size.Height = 44.000000000000000000
-    Size.PlatformDefault = False
-  end
-  inherited ListViewContatos: TListView
-    Position.Y = 312.000000000000000000
-    Size.Width = 450.000000000000000000
-    Size.Height = 383.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Font.Size = 17.000000000000000000
-    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
-    ItemAppearanceObjects.ItemObjects.Detail.Font.Size = 14.000000000000000000
-  end
-  inherited Novo: TButton
-    Position.Y = 193.000000000000000000
-    Size.Width = 196.000000000000000000
-    Size.Height = 44.000000000000000000
-    Size.PlatformDefault = False
-  end
-  inherited Excluir: TButton
-    Position.X = 8.000000000000000000
-    Position.Y = 245.000000000000000000
-    Size.Width = 196.000000000000000000
-    Size.Height = 44.000000000000000000
-    Size.PlatformDefault = False
-  end
-  inherited edtNome: TEdit
-    TextSettings.FontColor = claAliceblue
-    Position.Y = 128.000000000000000000
-    StyledSettings = [Family, Size, Style]
-    inherited Telefone: TLabel
-      Position.X = 215.000000000000000000
-      Position.Y = -25.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    inherited ListViewContatos: TListView
+      Align = MostBottom
+      Position.Y = 240.000000000000000000
+      Size.Width = 450.000000000000000000
+      Size.Height = 455.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
     end
   end
   inherited StyleBook1: TStyleBook

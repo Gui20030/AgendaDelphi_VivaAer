@@ -9,117 +9,176 @@ object Form1: TForm1
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  DesignerMasterStyle = 0
+  DesignerMasterStyle = 3
   object Z: TRectangle
-    Align = Client
+    Align = Contents
     Fill.Color = xFF232323
     Size.Width = 635.000000000000000000
     Size.Height = 389.000000000000000000
     Size.PlatformDefault = False
     Stroke.Kind = None
-    object Nome: TLabel
-      StyledSettings = [Family, Size]
-      Position.X = 8.000000000000000000
-      Position.Y = 71.000000000000000000
-      Size.Width = 100.000000000000000000
-      Size.Height = 17.000000000000000000
+    object Label1: TLabel
+      StyledSettings = [Family]
+      Position.X = 248.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 379.000000000000000000
+      Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Font.Size = 30.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      Text = 'Nome'
+      TextSettings.FontColor = xFF44FC2E
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'Agenda VivaAer'
       TabOrder = 0
-      object Label3: TLabel
-        StyledSettings = [Family]
-        Position.X = 240.000000000000000000
-        Position.Y = -56.000000000000000000
-        Size.Width = 379.000000000000000000
-        Size.Height = 41.000000000000000000
+    end
+    object GridPanelLayout1: TGridPanelLayout
+      Position.X = 8.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 239.000000000000000000
+      Size.Height = 66.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      ColumnCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 1
+          Control = Salvar
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = Excluir
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = Cancelar
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = Novo
+          Row = 0
+        end>
+      RowCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      object Cancelar: TButton
+        Anchors = []
+        Position.X = 59.750000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
+        TabOrder = 2
+        Text = 'Cancelar'
+        TextSettings.Trimming = None
+        OnClick = CancelarClick
+      end
+      object Excluir: TButton
+        Anchors = []
+        Position.X = 179.250000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 11
+        Text = 'Excluir'
+        TextSettings.Trimming = None
+        OnClick = ExcluirClick
+      end
+      object Novo: TButton
+        Anchors = []
+        Position.X = 59.750000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        Text = 'Novo'
+        TextSettings.Trimming = None
+        OnClick = NovoClick
+      end
+      object Salvar: TButton
+        Anchors = []
+        Position.X = 179.250000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Salvar'
+        TextSettings.Trimming = None
+        OnClick = SalvarClick
+      end
+    end
+    object edtNome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 12
+      Position.X = 8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object Nome: TLabel
+        StyledSettings = [Family, Size]
+        Position.Y = -17.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
         TextSettings.Font.StyleExt = {00070000000000000004000000}
-        TextSettings.FontColor = xFFC0FF9B
-        TextSettings.HorzAlign = Center
-        Text = 'Agenda Delphi VivaAer'
+        TextSettings.FontColor = claWhite
+        Text = 'Nome'
         TabOrder = 0
       end
     end
-    object Cancelar: TButton
-      Position.X = 124.000000000000000000
-      Position.Y = 226.000000000000000000
+    object edtTel: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
-      Text = 'Cancelar'
-      TextSettings.Trimming = None
-      OnClick = CancelarClick
-    end
-  end
-  object edtTel: TEdit
-    Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 0
-    KeyboardType = NumberPad
-    FilterChar = '1234567890+-() '
-    Position.X = 8.000000000000000000
-    Position.Y = 169.000000000000000000
-    Size.Width = 196.000000000000000000
-    Size.Height = 32.000000000000000000
-    Size.PlatformDefault = False
-  end
-  object Salvar: TButton
-    Position.X = 8.000000000000000000
-    Position.Y = 226.000000000000000000
-    TabOrder = 1
-    Text = 'Salvar'
-    TextSettings.Trimming = None
-    OnClick = SalvarClick
-  end
-  object ListViewContatos: TListView
-    ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
-    ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
-    HeaderAppearanceClassName = 'TListHeaderObjects'
-    FooterAppearanceClassName = 'TListHeaderObjects'
-    Position.X = 248.000000000000000000
-    Position.Y = 64.000000000000000000
-    Size.Width = 379.000000000000000000
-    Size.Height = 317.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 3
-    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
-    ItemAppearanceObjects.ItemObjects.Text.TextColor = xFF565656
-    StyleLookup = 'ListViewContatosStyle1'
-  end
-  object Novo: TButton
-    Position.X = 8.000000000000000000
-    Position.Y = 19.000000000000000000
-    TabOrder = 8
-    Text = 'Novo'
-    TextSettings.Trimming = None
-    OnClick = NovoClick
-  end
-  object Excluir: TButton
-    Position.X = 124.000000000000000000
-    Position.Y = 19.000000000000000000
-    TabOrder = 9
-    Text = 'Excluir'
-    TextSettings.Trimming = None
-    OnClick = ExcluirClick
-  end
-  object edtNome: TEdit
-    Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 10
-    Position.X = 8.000000000000000000
-    Position.Y = 96.000000000000000000
-    Size.Width = 196.000000000000000000
-    Size.Height = 32.000000000000000000
-    Size.PlatformDefault = False
-    object Telefone: TLabel
-      StyledSettings = [Family, Size]
-      Position.Y = 48.000000000000000000
-      Size.Width = 116.000000000000000000
-      Size.Height = 17.000000000000000000
+      KeyboardType = NumberPad
+      FilterChar = '1234567890+-() '
+      Position.X = 8.000000000000000000
+      Position.Y = 169.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      Text = 'Telefone'
-      TabOrder = 0
+      object Telefone: TLabel
+        StyledSettings = [Family, Size]
+        Position.Y = -17.000000000000000000
+        Size.Width = 116.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Telefone'
+        TabOrder = 0
+      end
+    end
+    object ListViewContatos: TListView
+      ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+      ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Position.X = 248.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 379.000000000000000000
+      Size.Height = 317.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+      ItemAppearanceObjects.ItemObjects.Text.TextColor = xFF565656
+      StyleLookup = 'ListViewContatosStyle1'
     end
   end
   object StyleBook1: TStyleBook

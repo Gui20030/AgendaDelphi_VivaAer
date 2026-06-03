@@ -30,8 +30,9 @@ type
     StyleBook1: TStyleBook;
     Telefone: TLabel;
     Cancelar: TButton;
-    Label3: TLabel;
     Timer1: TTimer;
+    Label1: TLabel;
+    GridPanelLayout1: TGridPanelLayout;
     procedure NovoClick(Sender: TObject);
     procedure ExcluirClick(Sender: TObject);
     procedure SalvarClick(Sender: TObject);
@@ -53,7 +54,6 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.Windows.fmx MSWINDOWS}
-{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TForm1.NovoClick(Sender: TObject);
 begin
